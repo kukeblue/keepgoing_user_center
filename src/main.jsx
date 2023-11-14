@@ -4,10 +4,10 @@ import './index.css'
 import PicPage from './page/pic/index'
 import DetailPage from './page/detail/index'
 import PayPage from './page/pay/index'
-import ResultPage from './page/result/index'
-import AboutPage from './page/about/index'
-import CoursePage from './page/course/index'
-import CourseDetail from './page/courseDetail/index'
+// import ResultPage from './page/result/index'
+// import AboutPage from './page/about/index'
+// import CoursePage from './page/course/index'
+// import CourseDetail from './page/courseDetail/index'
 import Login from './page/login/index'
 import Register from './page/register/index'
 
@@ -58,43 +58,43 @@ const router = createBrowserRouter([
                     <PicPage />
                 ),
             },
-            
             {
                 path: "/goods/detail",
                 element: (
                     <DetailPage />
                 ),
             },
-            {
-                path: "/course",
-                element: (
-                    <CoursePage />
-                ),
-            },
-            {
-                path: "/about",
-                element: (
-                    <AboutPage />
-                ),
-            },
-            {
-                path: "/course/course-detail",
-                element: (
-                    <CourseDetail />
-                ),
-            },
+            // {
+            //     path: "/course",
+            //     element: (
+            //         <CoursePage />
+            //     ),
+            // },
+            // {
+            //     path: "/about",
+            //     element: (
+            //         <AboutPage />
+            //     ),
+            // },
+            // {
+            //     path: "/course/course-detail",
+            //     element: (
+            //         <CourseDetail />
+            //     ),
+            // },
             {
                 path: "/goods/pay",
                 element: (
                     <PayPage />
                 ),
-            },{
-                path: "/goods/result",
-                element: (
-                    <ResultPage />
-                ),
+            },
+            //{
+            //     path: "/goods/result",
+            //     element: (
+            //         <ResultPage />
+            //     ),
                 
-            }
+            // }
         ],
     },
 ]);

@@ -5,10 +5,18 @@ html, body, #root {
     font-family: Inter,-apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,noto sans,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
+button:focus, button:focus-visible {
+    outline: unset !important;
+}
+
 div {
     font-family: Inter,-apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,noto sans,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
+.ant-breadcrumb-separator {
+    color: #fff !important;
+}
 .link {
+    color: #fff;
     font-weight: 600;
 }
 
@@ -17,6 +25,8 @@ div {
     height: 100%;
     // background-color: yellow;
     display: flex;
+    background-image: url('/images/bg1.png');
+    background-size: auto 100%;
 }
 
 .navigation_left {
@@ -153,7 +163,7 @@ div {
 .layout-header {
     width: 100%;
     height: 50px;
-    background: #fff;
+    background-color: rgba(17,17,17,0.85);
     box-shadow: 0 2px 4px 1px rgba(0,0,0,.08);
     z-index: 998;
     flex-shrink: 0;

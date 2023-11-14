@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './index.less'
 import { useSearchParams, useNavigate } from "react-router-dom";
-import { getProduct, addPay, getQrcodeResult } from "@/api"
+// import { getProduct, addPay, getQrcodeResult } from "@/api"
 import { Button, Descriptions, Divider, Form, Input, Select, message, Modal } from 'antd';
 import { objectToFormData } from '@/utils/index'
 
@@ -49,9 +49,9 @@ function PayPage() {
 
     const navigate = useNavigate();
     useEffect(() => {
-        getProduct(id).then(res => {
-            setProduct(res.data.attributes)
-        })
+        // getProduct(id).then(res => {
+        //     setProduct(res.data.attributes)
+        // })
     }, [])
     const [form] = Form.useForm();
 
@@ -71,20 +71,20 @@ function PayPage() {
         }
         const formData = objectToFormData(data);
         addPay(formData).then(res=> {
-            setOrder(data)
-            if(res.code == 200) {
-                setShowForm(false)
-                const {
-                    id,
-                    payNum
-                } = res.result
-                setPayId(id)
-                setPayNum(payNum)
-                setCodeUrl(`http://localhost:8888/assets/qr/wechat/${values.money}/${payNum}.png`)
-                getWeiXinScranCode(id)
-            }else {
-                message.warning(res.message)
-            }
+            // setOrder(data)
+            // if(res.code == 200) {
+            //     setShowForm(false)
+            //     const {
+            //         id,
+            //         payNum
+            //     } = res.result
+            //     setPayId(id)
+            //     setPayNum(payNum)
+            //     setCodeUrl(`http://localhost:8888/assets/qr/wechat/${values.money}/${payNum}.png`)
+            //     getWeiXinScranCode(id)
+            // }else {
+            //     message.warning(res.message)
+            // }
         })
     }
 
@@ -101,13 +101,13 @@ function PayPage() {
             }
             outTime = outTime + 1
             setOutTimeValue(formatTime(120 - outTime))
-            getQrcodeResult(id).then(res=>{
-                console.log(res)
-                if(res.result == 1) {
-                    clearInterval(interval)
-                    navigate('/goods/result')
-                }
-            })
+            // getQrcodeResult(id).then(res=>{
+            //     console.log(res)
+            //     if(res.result == 1) {
+            //         clearInterval(interval)
+            //         navigate('/goods/result')
+            //     }
+            // })
             }, 1000)
     }
 

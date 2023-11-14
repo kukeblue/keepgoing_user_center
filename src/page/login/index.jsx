@@ -67,7 +67,7 @@ function LoginPage() {
 
     return <div className='login-page'>
         <div className='login-header'>
-            <div>LOGO</div>
+            <div className='logo'></div>
             <div style={{'cursor': 'pointer'}} onClick={()=>{
                 navigate('/index')
             }}>返回首页</div>

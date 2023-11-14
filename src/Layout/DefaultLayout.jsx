@@ -149,7 +149,7 @@ function Navigation() {
     })
     const navigate = useNavigate();
     return <div className='navigation_left'>
-        <img src='https://upload.cyuandao.com/2023072000320494658.png' className='app-log'></img>
+        <img src='/images/logo.png' className='app-log'></img>
         <div className='app-name'>kuke的虚拟店铺</div>
         <div className='navigation-menu'>
             <div 
@@ -160,7 +160,7 @@ function Navigation() {
                     首页
                 </div>
             </div>
-            <div 
+            {/* <div 
             onClick={() => navigate("/course")}
             
             className={'navigation-menu-item ' + (navigationIndex == 1 ? 'navigation-menu-item_active' : '')}>
@@ -176,11 +176,11 @@ function Navigation() {
                 <div className='navigation-menu-item-text'>
                     作者
                 </div>
-            </div>
+            </div> */}
         </div>
        
         <div className='menu-line'></div>
-        <div 
+        {/* <div 
         onClick={()=>{
             // navigate('/vip')
         }}
@@ -189,7 +189,7 @@ function Navigation() {
             https://upload.cyuandao.com/_nuxt/black-update-vip-plus7.svg
             '></img>
             欢迎光临
-        </div>
+        </div> */}
     </div>
 }
 

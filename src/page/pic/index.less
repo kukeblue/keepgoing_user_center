@@ -3,7 +3,7 @@
     height: calc(100vh - 60px);
     overflow:hidden;
     display: flex;
-    background-color: #f5f5f5;
+    // background-color: #f5f5f5;
 }
 .page-content {
     // max-width: 1000px;
@@ -16,24 +16,48 @@
 }
 .goods-wrap {
     width: 100%;
-    padding: 40px;
+    padding: 40px 20%;
     
+}
+.goods-item:hover {
+    .goods-hover {
+        display: flex;
+    }
 }
 .goods-item {
     width: 180px;
     border-radius: 5px;
     // border: 1px solid #000;
+    background-color: #fff;
     font-size: 14px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
     border-radius: 12px;
+    position: relative;
+}
+.goods-hover {
+    width: 180px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    color: #f5f5f5;
+    font-weight: 700;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 .goods-pic {
     cursor: pointer;
     width: 180px;
-    height: 180px;
+    height: 200px;
     border: 1px solid #eee;
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
     border-radius: 10px;
+
 }
 .goods-name {
     margin-top: 15px;
@@ -46,13 +70,13 @@
     width: 100%;
     text-align: center;
     font-size: 14px;
-    color: #333;
+    color: #1da6ba;
 }
 .goods-dec {
 
     width: 100%;
     text-align: left;
-    font-size: 11px;
+    font-size: 12px;
     color: #999;
     padding: 10px;
     box-sizing: border-box;
